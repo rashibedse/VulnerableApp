@@ -118,6 +118,12 @@ tasks.register('GenerateSampleVulnerability') {
 }
 
 dependencies {
+    constraints {
+        implementation('org.apache.logging.log4j:log4j-core:2.25.4') {
+            because 'CVE-2026-34480'
+        }
+    }
+
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
