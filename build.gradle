@@ -118,6 +118,12 @@ tasks.register('GenerateSampleVulnerability') {
 }
 
 dependencies {
+    constraints {
+        implementation('com.sun.mail:jakarta.mail:1.6.8') {
+            because 'CVE-2025-7962'
+        }
+    }
+
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
