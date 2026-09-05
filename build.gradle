@@ -118,6 +118,12 @@ tasks.register('GenerateSampleVulnerability') {
 }
 
 dependencies {
+    constraints {
+        implementation('org.springframework:spring-web:6.0.0') {
+            because 'CVE-2016-1000027'
+        }
+    }
+
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
