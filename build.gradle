@@ -119,8 +119,8 @@ tasks.register('GenerateSampleVulnerability') {
 
 dependencies {
     constraints {
-        implementation('org.springframework:spring-web:5.3.34, 6.0.19, 6.1.6') {
-            because 'CVE-2024-22262'
+        implementation('org.springframework:spring-web:6.1.4, 6.0.17, 5.3.32') {
+            because 'CVE-2024-22243'
         }
     }
 
